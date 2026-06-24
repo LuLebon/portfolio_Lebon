@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+	Based on solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Lucie Lebon - Jeux Video</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h1>Le Jeu</h1>
+							<p>Avant de bifurquer vers l'animation temps réel, j'ai travaillé sur plusieurs jeux vidéo.</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner" id="Project_Bravospeed">
+									<div class="content rambling">
+										<h2 class="bravospeed" >Bravospeed - Mobile</h2>
+										<h3>Une loterie gratuite sur mobile</h3>
+										<h5>Unity | C# | Mobile | Android | Apple | Analytics</h5>
+										<p>
+											<span class="image left"><img src="./images/BravoSpeed.png"></span>
+											J’ai pour ce jeu créé plusieurs pages (tirage, boutique) et travaillé sur l’intégration des <b>analytics</b> et de l’<b>AB testing</b>. 
+											Au fur et à mesure de l’avancement du projet, j’ai aussi <b>réduit le poids</b> de l’application et <b>amélioré son frame rate</b> via un usage poussé de plusieurs outils de profilage.</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner" id="Project_Fallback">
+									<div class="content rambling" >
+										<h2 class="fallback" >Fallback - PC</h2>
+										<h3>Dev Tools pour un roguelike nantais.</h3>
+										<p>Fallback est un jeu en 2.5D de type rogue-like développé sur Unity par le studio Endroad et disponible sur Steam.Développeuse sur ce jeu, j’ai travaillé à l’intégration de l’audio, des UIs, et des analytics, sur le système de sauvegarde et l’ajout de la surcouche Steam (et ses succès).</p>
+										<h4>Faciliter l'intégration de l'audio</h4>
+										<h5>Unity | C# | Wwise</h5>
+										<p>Sur <i>Fallback</i>, les SFXs étaient créés et intégrés depuis Wwise. Deux types de sons étaient encore en attente : les musiques du jeu et le bruit des pas du joueur.
+											<br>Les musiques changent en fonction des phases de jeu : hub, exploration, combat, menu… 
+											Pour rationaliser les transitions entre musiques, j’ai créé un <b>système centralisé</b> fonctionnant autour d’une énumération. Cela a permis de supprimer les effets de bords et d’intégration rapidement et simplement les musiques ajoutées en cours de développement.
+											<br>Pour ce qui est du bruit des pas du joueurs, le point de questionnement était de savoir comment associer le bon son au bon élément de décors. J’ai choisi de mettre en place un <b>système d’audio surfaces</b> : à chaque surface du niveau est associé un materiel audio. Cette association doit être automatique, de nouveaux éléments de décors et niveaux étant ajoutés régulièrement. Le processus de désignation se fait en plusieurs étape : a chaque texture est associé un matériau (bois, métal…), puis on lance le processus de création d’audio surface qui va chercher dans la scène tous les objets sur lequel le joueur pourrait être amené à marcher, récupère leurs matériaux et leur bounding boxes et à partir de ces deux éléments délimite dans la scène des zones bois, bétons etc. utilisées en jeu par le système audio. Les outils nécessaires à une retouche manuelle sont aussi disponibles.</p>
+											<span class="image fit framed">
+												<img src="./images/EndroadAudioSurfaces_Square.PNG" alt="AudioSurfaces generation">
+											</span>
+										<h4>Création d'UI</h4>
+										<h5>Unity | C#</h5>
+										<p>Pour des raisons d’optimisation et de performance, un système d’UI custom via script a été créé pour le jeu. J’ai ajouté à ce système d’UI un ensemble d’outils de débogage et réalisé aussi plusieurs prototypes d’UIs.</p>
+										<h4>Sauvegarder la progression du joueur | Analytics</h4>
+										<h5>Unity | C# | Asynchrone | </h5>
+										<p>J’ai aussi mis en place le système de sauvegardes. Ce système permet de sauvegarder la progression du joueur, mais aussi les éléments d’analytics en cas d’absence de connexion internet. En fonction des besoins, les fichiers de sauvegarde pouvaient être en clair ou encodés sous un format binaire afin d’empêcher des triches éventuelles.</p>
+										<p>Enfin, j’ai intégré les analytics au jeu et mis en place les tableaux d’analyse et les entonnoirs dans la console web.</p>
+										<a target="_blank" href="https://store.steampowered.com/app/864540/Fallback/" class="special">Page Steam du jeu</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style1">
+								<div class="inner" id="Project_Potions">
+									<div class="three-potion" aria-hidden="true"></div>
+									<div class="content rambling">
+										<h2 class="potions" >Labo de potions – Réalité virtuelle</h2>
+										<h3>Pour faire découvrir la réalité virtuelle</h3>
+										<h5> Réalité Virtuelle | Leap Motion | Unity | C# | Education</h5>
+										<p>Le labo de potion est un mini jeu pour Leap motion (capteur à main). 
+											<br>Le joueur est un sorcier qui doit réaliser une potion en versant les fioles dans le chaudron dans le bon ordre.
+											<br>Ce jeu a été <b>utilisé lors des interventions en milieu scolaire</b> (primaire et collège) dans un but pédagogique. La découverte de la réalité augmentée et de la réalité virtuelle était alors au programme. L’objectif avec le labo de potion était de montrer que la réalité virtuelle ne se limite pas aux casques, mais que ce terme couvre en fait une multitude de dispositifs qui envoie le joueur dans un monde virtuel via une captation des mouvements du corps. 
+											<br>D’autres mini jeux présentaient la réalité augmentée et une expérience de réalité virtuelle sur casque.
+											<br>Les présentations ont été appréciées à la fois par les élèves et les enseignants. </p>
+									</div>
+								</div>
+							</section>
+
+					<section id="two" class="wrapper alt spotlight style2" >
+						<div class="inner" id="Project_Weather">
+							<div class="content rambling" >
+								<h2 class="wheather">Weather Manager</h2>
+								<h3><span class="image right"><img src="./images/WeatherManager.png"></span>
+									La pluie et le beau temps dans Unity</h3>
+								<h5> Unity | C# | Gestion de projet</h5>
+								<p>Weather Manager était notre projet de fin d’études réalisé pour le studio Zero Games. Il permettait d’ajouter un système de météo à Unity. Effets météos, events et transitions étaient gérés depuis un <b>node editor</b>. Plusieurs shaders (neige, pluie…) ont aussi été créés.</p>
+								<a target="_blank" href="https://youtu.be/SfbwfLjqabw" class="special">Voir la Timelapse</a>
+							</div>
+						</div>
+					</section>
+
+				</section>
+
+
+				<!-- Footer -->
+					<section id="footer">
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/pagesConstant.js"></script>
+			<script> SetMenu("games"); SetFooter();</script>
+
+	</body>
+</html>

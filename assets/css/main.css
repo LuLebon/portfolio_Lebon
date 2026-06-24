@@ -248,7 +248,12 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0em 0 2em 0;
+	}
+
+	.rambling > p
+	{
+		margin: 2em 0 1em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -288,9 +293,10 @@ input, select, textarea {
 	}
 
 	h4 {
-		font-size: 0.8em;
+		text-transform: uppercase;
+		font-size: 0.84em;
 		margin: 0;
-    	padding: 0 0 0.5em 0;
+    	padding: 3em 0 0em 0;
 	}
 
 
@@ -2479,6 +2485,13 @@ input, select, textarea {
 			max-width: 40%;
 		}
 
+		@media screen and (max-width: 480px)
+		{
+			.image.left, .image.right {
+				max-width: 100%;
+			}
+		}
+
 			.image.left img, .image.right img {
 				width: 100%;
 			}
@@ -3173,6 +3186,11 @@ input, select, textarea {
 				border: 0;
 				display: inline-block;
 				padding: 0 1em;
+			}
+
+			#header nav a.current
+			{
+				text-shadow: 0 0 0.04em currentColor;
 			}
 
 				#header nav a:before {
@@ -3907,7 +3925,7 @@ input, select, textarea {
 
 			.wrapper.spotlight .image {
 				border-radius: 10px;
-				margin: 0 3em 2em 0;
+				/*margin: 0 3em 2em 0;*/
 				overflow: hidden;
 				-ms-flex: 1;
 			}
@@ -3915,6 +3933,20 @@ input, select, textarea {
 				.wrapper.spotlight .image img {
 					border-radius: 10px;
 					width: 100%;
+				}
+
+				.wrapper.spotlight .image.framed img {
+				    border-radius: 10px;
+					width: 80%;
+					display: block;
+					margin: auto;
+				}
+
+				@media screen and (max-width: 480px)
+				{ 
+					.wrapper.spotlight .image.framed img {
+						width: 100%;
+					}
 				}
 
 			.wrapper.spotlight .content {
@@ -3937,6 +3969,11 @@ input, select, textarea {
 				background-color: #F2EBBF;
 			}
 
+			.wrapper.spotlight.style3 {
+				background-color: #F2EBBF;
+;
+			}
+
 				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after, .wrapper.alt:before, .wrapper.alt:after {
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23F2EBBF%3B' /%3E%3C/svg%3E");
 				}
@@ -3948,70 +3985,6 @@ input, select, textarea {
 				.wrapper.spotlight.style2:after {
 					box-shadow: inset 0 -1px 0 0 #F2EBBF, 0 1px 0 0 #F2EBBF;
 				}
-
-			.wrapper.spotlight.style3 {
-				background-color: #3f4e85;
-			}
-
-				.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233f4e85%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style3:before {
-					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
-				}
-
-				.wrapper.spotlight.style3:after {
-					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
-				}
-
-			.wrapper.spotlight.style4 {
-				background-color: #39477c;
-			}
-
-				.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2339477c%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style4:before {
-					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
-				}
-
-				.wrapper.spotlight.style4:after {
-					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
-				}
-
-			.wrapper.spotlight.style5 {
-				background-color: #324072;
-			}
-
-				.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23324072%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style5:before {
-					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
-				}
-
-				.wrapper.spotlight.style5:after {
-					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
-				}
-
-			.wrapper.spotlight.style6 {
-				background-color: #2d3a69;
-			}
-
-				.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232d3a69%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style6:before {
-					box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
-				}
-
-			.wrapper.spotlight.style6:after {
-				box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
-			}
 
 		.wrapper:before,
 		.wrapper:after {
@@ -4041,7 +4014,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
-			#three.wrapper .three-media {
+			#three.wrapper .three-conf {
 				background-image: url("../../images/Bordeau_2025_B.jpg");
 				background-position: 70% top;
 				background-repeat: no-repeat;
@@ -4052,6 +4025,20 @@ input, select, textarea {
 				top: -6.5em;
 				width: var(--three-image-width);
 			}
+
+			#three.wrapper .three-potion {
+				background-image: url("../../images/LaboPotions_Square.PNG");
+				background-position: 70% bottom;
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				bottom: -6.5em;
+				left: 0;
+				position: absolute;
+				top: -6.5em;
+				width: var(--three-image-width);
+			}
+
+
 
 			#three.wrapper .content {
 				margin-left: calc(var(--three-image-width) + var(--three-content-gap));
@@ -4108,11 +4095,15 @@ input, select, textarea {
 					--three-content-gap: 2em;
 				}
 
-				#three.wrapper .three-media {
+				#three.wrapper .three-conf {
 					bottom: -4.75em;
 					top: -4.75em;
 				}
 
+				#three.wrapper .three-potion {
+					bottom: -4.75em;
+					top: -4.75em;
+				}
 		}
 
 		@media screen and (max-width: 736px) {
@@ -4170,7 +4161,18 @@ input, select, textarea {
 					padding: 2.5em 0;
 				}
 
-				#three.wrapper .three-media {
+				#three.wrapper .three-conf {
+					background-position: center top;
+					background-size: cover;
+					bottom: auto;
+					height: 24em;
+					left: 0;
+					margin-bottom: 0;
+					position: relative;
+					width: 100%;
+				}
+
+					#three.wrapper .three-potion {
 					background-position: center top;
 					background-size: cover;
 					bottom: auto;

@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<!--
+	Based on solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Lucie Lebon - Series temps reel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<nav>
+						</nav>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h1>Pipe et Animation Temps Réel</h1>
+							<p>En 2020, alors que le temps réel faisait son entrée dans l’industrie, j’intégrais Miam!Studio pour travailler sur leur première série : Edmond & Lucy (sur Unity) puis quelques années plus tard sur Les Minus (Unreal) et la saison 2 de Edmond & Lucy.</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner" id="Project_Edmond">
+									<div class="content rambling">
+										<h2 class="major">Pipe de production 1.5 - Edmond et Lucy (Unity)</h2>
+											<h3>Deux séries - <i>Edmond et Lucy</i> (Unity) et <i>les Minus</i> (Unreal) - un seul pipe de production</h3>
+											<p><span class="image right"><img src="./images/Edmond-S1_2.jpg"></span>
+												Arrivée en cours de production sur la série <i>Edmond et Lucy</i>, j’ai développé pour l’équipe de production plusieurs outils avec pour objectif d’améliorer leur confort de travail et de réduire le temps passé sur les tâches rébarbatives. </p>
+											<h4>La création du pipe de production</h4>
+											<h5>Architecture | Python | Shotgrid | Storyboard Pro</h5>
+											<p>Plusieurs tâches chronophages ont été identifiées : </p>
+											<ul>
+												<li>La rédaction des breakdowns.</li>
+												<li>La création des épisodes sur Shotgrid et leur mise à jour ultérieure.</li>
+												<li>L’ajout des notes de retake au Shotgrid.</li>
+											</ul>
+											<p>Cela a mené à la création de deux outils python avec interface graphique.
+												<br>Le premier, appelé <b>BreakdownMachine, a réduit de 60% le temps de création</b> d’un breakdown. De trois jours avant l’outil, le temps de rédaction est passé à un jour avec ce nouvel outil.
+												<br>Grace au second outil, la création des épisodes sur Shotgrid et l’envoie des notes de retake ont été complètement automatisés.</p>
+											<span class="image fit framed">
+												<img src="./images/Edmond.png" alt="">
+											</span>
+											<h4>Etendre le pipe à d'autres départements</h4>
+											<h5>Python | Shotgrid | Traitement de médias</h5>
+											<p>Deux autres outils transverses aux différentes équipes (production, artistiques mais aussi distribution) ont eu le droit à une première version lors de cette production :</p>
+											<ul>
+												<li>Une <b>visionneuse de Shotgrid</b> permettant de sortir au format pdf des listes d’assets filtrées. Ces PDFs peuvent ensuite être partagées aux équipes externes au studio.</li>
+												<li>Une <b>Média Machine</b> qui permet des <b>retouches courantes sur des vidéos et images</b>, comme par exemple ajouter une watermark sur une vidéo, changer l’audio, passer une série d’images en vidéo...</li>
+											</ul>
+											<p></p>
+											<span class="image fit framed">
+												<img src="./images/Edmond_Grue.jpg" alt="">
+											</span>
+											<p></p>
+											<blockquote>Ces outils créés pour <i>Edmond et Lucy</i> sont la <b>base du pipe Miam</b> et la première pierre du Pipe 1.5 tel que je le conçois.
+												<br>En effet, l’architecture de ces outils a été <b>pensée dès le début pour une bascule rapide en multi-production</b> : chaque série utilise la même version de l’outil. Temps de développement et améliorations sont ainsi mutualisés. Dans cette architecture, les points de connexion aux logiciels tiers esont également isolés de façon à augmenter la résilience à un changement de logiciel annexe. 
+												À titre d’exemple, le <b>passage de Unity à Unreal</b> entre <i>Edmond et Lucy</i> et <i>Les Minus</i> <b>n’a pas affecté les outils de production</b>. Un changement de manager d’assets ne demanderait la modification que d’une classe unique dans la BreakdownMachine.</blockquote>
+											<a target="_blank" href="https://vimeo.com/757089770/e929ce6b4c?fl=pl&fe=cm" class="special">Voir la bande annonce</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner" id="Project_BoardMachine">
+									<div class="content rambling">
+										<h2 class="major">BoardMachine</h2>
+										<h3>Les décors 3D au storyboard</h3>
+										<p>La BoardMachine est l’outil phare du pipe Miam, et une réelle plus-value artistique.</p>
+										<h4>Faire disparaitre les frictions entre Storyboard et Layout</h4>
+										<p><span class="image left"><img src="./images/BM_F.png"></span>
+											L'outil BoardMachine <b>répond à un point de friction repéré entre les étapes du board et du layout</b>. Les boarders réalisent une première version dessinée de l’épisode. Hors, au dessin, certains objets sont déformés ou à la mauvaise échelle, ce qui peut rendre la reproduction de certains passages difficile au layout : personnage trop grand pour le décors ou le cadre, expression faciale impossible en 3D… Cela entraîne des passes de retake au Layout qui pourraient être facilement évitées.
+											<br>Il fallait donc donner aux storyboarders le moyen d’intégrer directement les décors 3D et les personnages de la série à leurs boards.
+											<br>C’est dans ce but qu’a été développée la BoardMachine. Cet outil permet de créer des mises en scène avec les assets 3D de la série et de les exporter en .png pour les intégrer aux storyboards</p>
+										<h4>Du prototype à une BoardMachine fonctionnelle</h4>
+										<h5>Unity | C# | Bundles | Asynchrone</h5>
+										<p>Avant mon arrivée, un prototype avait déjà été réalisé mais il fallait le reprendre entièrement et des fonctionnalités restaient à ajouter.
+											<br>En me basant sur ce prototype, j’ai développé sur Unity la BoardMachine utilisée en production. 
+											<br>La BoardMachine est un exécutable Unity. Autonome, il peut être utilisé aussi bien au studio que depuis chez les artistes (très pratique en période de confinement).
+											<br>Les <b>assets</b> de la série sont <b>chargées en asynchrone</b> depuis un serveur et l’artiste peut les déplacer, masquer, et dupliquer à l’envie avant de sauvegarder sa mise en scène et de l’exporter sous forme d’une ou plusieurs images, selon ses besoins. 
+											L’outil permet en effet de <b>rendre séparément personnages et décors</b>. Pour rendre au mieux les intentions de l’artiste, la BoardMachine permet aussi de modifier la météo, la saison et le moment de la journée.
+											<br>Avec l’utilisation systématisée de la BoardMachine, les retakes liées aux problèmes d’échelle ont quasiment disparu. Des usages annexes ont aussi émergé.</p>
+										<div class="row gtr-uniform">
+											<div class="col-6"><span class="image fit"><img src="./images/BM_G.png" alt="Boardmachine - Loading George"></span></div>
+											<div class="col-6"><span class="image fit"><img src="./images/BM_A.png" alt="Boardmachine - Positionning the characters"></span></div>
+											<div class="col-6"><span class="image fit"><img src="./images/BM_K.png" alt="Boardmachine - Setting the mood"></span></div>
+											<div class="col-6"><span class="image fit"><img src="./images/BM_D.png" alt="Boardmachine - Screenshooting"></span></div>
+											<div class="col-6"><span class="image fit"><img src="./images/BM_L.png" alt="Boardmachine - Importing the screenshot in StoryboardPro"></span></div>
+											<div class="col-6"><span class="image fit"><img src="./images/BM_M.png" alt="Boardmachine - Redrawing characters"></span></div>
+										</div>
+										<p>Le superviseur du storyboard utilisait les fichiers de sauvegarde fournis par son équipe pour effectuer lui-même certaines retouches.</p>
+										<blockquote>Un point technique est à noter : les assets étant chargés depuis un serveur, de nouveaux assets et personnages peuvent être ajoutés à la BoardMachine sans que les artistes aient à charger une nouvelle version de l’outil.
+											<br>Il était aussi possible de couper les accès à distance, une sécurité supplémentaire quand une partie des artistes travaille en distanciel.
+										</blockquote>
+										<h4>De nouveaux usages au layout et à l'animation</h4>
+										<h5>Unity | Maya | Live-Link</h5>
+										<p>L’ajout d’un <b>live-link</b> (connexion entre deux logiciels en temps réel) a permis aux animateurs travaillant sur <b>Maya</b> de <b>voir directement dans la BoardMachine</b> ce que donneront leurs <b>mouvements de caméra</b> dans Unity. L’utilisation des décors finaux au storyboard a permis aux chaînes de se faire une meilleure idée de l’aspect final qu’aurait l’épisode.</p>
+										<h4>Dessiner dans un univers 3D</h4>
+										<h5>Unity | Dessin Vectoriel</h5>
+										<p>Un <b>module de dessin vectoriel</b>, avec calques et toutes les fonctionnalités de base (couleur, gomme, trait variable, remplissage) a également été intégré et amélioré pour la BoardMachine.</p>
+										<a target="_blank" href="https://youtu.be/9EUOyBUL5KM" class="special">La BoardMachine en fonctionnement</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner" id="Project_Minus">
+									<div class="content rambling">
+										<h2 class="major">Unreal – Les Minus</h2>
+										<h3>Du moteur de jeu au moteur temps réel</h3>
+										<p>En prévision de la saison 1 des <i>Minus</i> (52x11’ diffusée sur Canal+), dès 2023 a commencé la création d’un pipe Unreal interne à Miam.
+											<br>A cet époque, l’objectif était clair : avancer autant que possible la création du pipe Unreal avant l’arrivée des équipes artistiques des Minus.</p>							
+										<p></p>
+										<span class="image fit framed">
+											<img src="./images/Minus_0225_1.jpg" alt="Minus - The whole gang">
+										</span>
+										<h4>Préparer le Pipe à un changement d'échelle et de moteur</h4>
+										<h5>Pipe (planification & développement) | Unreal | Blueprints | Sequencers | Génération d'épisode | Perforce</h5>
+										<p>A la fin de <i>Edmond et Lucy</i>, un <b>post mortem</b> de la série a été effectué par les équipes. De mon côté, j’ai fait un <b>relevé exhaustif des outils ajoutés à Unity</b> au cours de la production.
+											<br>Ensemble, ces deux éléments ont donné une <b>première liste des outils à Créer dans Unreal</b> pour adapter le moteur de jeu aux besoins d’une série d’animation. Parmis cette première série d’outils intra-Unreal j’ai personnellement développé la <b>génération du squelette des épisodes (création et imbrication des sequencers dans Unreal, import de l'animatic, ajout des assets, création des projets d'épisodes sur Perforce...)</b> afin de façon à refléter le breakdown de l’épisode. 
+											<br>Pour faire face à des assets plus lourds que sur <i>Edmond et Lucy</i> et des équipes plus nombreuses, il a aussi fallu changer de gestionnaire de version (un gestionnaire de version permet d’enregistrer les évolutions successives d’un épisode) et basculer sur <b>Perforce</b>. J’ai participé à son installation puis assuré sa gestion et créé sa documentation.</p>
+										<p></p>
+										<span class="image fit framed">
+											<img src="./images/Minus_Brico.jpg" alt="Minus - Oli and Titus">
+										</span>
+										<h4>Dialoguer avec les artistes pour supprimer les points de friction</h4>
+										<h5>Unreal | Blueprints | Python (Unity) | Batch (Perforce) | Shotgrid | Google Sheet</h5>
+										<p>Suite à l’arrivée des équipes, il y a eu les premiers échanges avec les superviseurs des différents départements artistiques. A leur demande une seconde vague d’outils Unreal a été crée, principalement pour le <b>lighting</b>, et ceux existant ont été améliorés. 
+											<br>La facilité d’utilisation des outils de lighting permettait d’appliquer une <b>première passe de lighting en quelques minutes</b>. Cela était fait près layout ce qui a amélioré le confort des équipes de Layout.
+											<br>Une couche d’automatisation interne au studio a aussi été ajoutée sur le <b>Perforce</b>, permettant d’automatiser <b>création, chargement et destruction des dépôts via batch</b>.
+											<br>Plusieurs modifications ont également été apportées au <b>shotgrid</b> de la série pour faciliter l’accès aux informations essentielles. Cela consistait en l’ajout de plusieurs <b>queries</b> (par exemple, affichage du caste complet d’un épisode, et non plus shot par shot) et de nouveaux statuts.
+											<br>Pour les équipes de production, il y a aussi eu un travail sur l’automatisation de tableurs. Parce que parfois, la solution la plus basique est aussi la plus efficace et la plus adaptée !</p>
+										<p></p>
+										<span class="image fit framed">
+											<img src="./images/MinusBellaFifi.jpg" alt="Minus - Bella and the Pony">
+										</span>
+										<h4>Gestion de projets : savoir où mettre la force de travail et quand</h4>
+										<h5>Gestion d'équipe | Gestion de plannings | Jira (Gestion & Automatisation)</h5>
+										<p>A chaque étape l’intégration d’Unreal au pipe Miam demandait d’avancer sur plusieurs outils en même temps, parfois dans un temps très limité ou pour une date spécifique. Les compétences demandées sont parfois spécifiques, et il ne faut pas oublier le temps de test et les retours potentiels des artistes. Aux <i>Minus</i> venaient s’ajouter d’autres projets liés à la vie du studio. 
+											<br>Suivre l’avancée de ces sujets, s’assurer que les dates butoirs et priorité sont respectées, intégrer au planning les retours et demandes des artistes faisait partie de mes tâches.
+											<br>Afin de faciliter le suivit mais aussi pour rendre le planning transparent pour mon équipe, j’ai basculé les équipes de R&D sur un <b>Jira</b> que j’ai <b>customisé et automatisé</b> pour nos besoins.</p>
+										<a target="_blank" href="https://vimeo.com/1071017228/202556dc96?fl=pl&fe=cm" class="special">Voir la bande annonce</a>
+									</div>
+								</div>
+							</section>
+
+					<section id="two" class="wrapper alt spotlight style2">
+						<div class="inner" id="Project_MiniGames">
+							<div class="content rambling">
+								<h2 class="major">Jeux Dérivés – <i>Edmond</i> et <i>Les Minus</i></h2>
+								<h3>Etendres les IPs des séries</h3>
+								<p>En parallèle des séries, plusieurs jeux plus ou moins complexes ont été développés et prototypés.</p>
+								<h4>Les minis jeux Edmond</h4>
+								<h5>Unity | WebGL | Supervision</h5>
+								<p>Pour accompagner la sortie de <i>Edmond et Lucy</i> trois jeux webGL ont été fournis aux chaînes (minis jeux jouables dans un navigateur), j’ai supervisé le développement de ces jeux.</p>
+								<div class="box alt">
+									<div class="row gtr-uniform">
+										<div class="col-6"><span class="image fit"><img src="./images/Musique_Accueil.png" alt="EL - Music Game hub"></span></div>
+										<div class="col-6"><span class="image fit"><img src="./images/Musique_NiveauB.png" alt="EL - Music Game playing"></span></div>
+										<div class="col-6"><span class="image fit"><img src="./images/Saison_Hiver.png" alt=""></span></div>
+										<div class="col-6"><span class="image fit"><img src="./images/Saison_Printemps.png" alt=""></span></div>
+									</div>
+								</div>
+								<h4>Le Voyage de la Chose</h4>
+								<h5>Unity | Optimisation (Code, Profiler...) | Gestionnaire de version</h5>
+								<p>Sur le jeu <i>Le Voyage de La Chose</i>, Un plateforme dans l’univers d’<i>Edmond et Lucy</i> où le joueur incarne La Chose, ma première tâche a été l’<b>optimisation</b> du projet. Le <b>poids</b> de certaines scènes (ou niveau) a été <b>divisé par 5</b> grâce à une bonne utilisation des prefabs, une détection des éléments les plus lourds en mémoire et leur remplacement par une alternative plus légère. C’était une étape indispensable pour pouvoir le mettre sous gestionnaire de version.
+									<br>Après cela, il y a eu toute une phase de débogage, de rationalisation et d’optimisation du code.</p>
+								<div class="box alt">
+									<div class="row gtr-uniform">
+										<div class="col-6"><span class="image fit"><img src="./images/VoyageChoseBarque.jpg" alt="The Thing's Travel - On a boat"></span></div>
+										<div class="col-6"><span class="image fit"><img src="./images/VoyageChoseB.png" alt="The Thing's Travel - On a fallen tree"></span></div>
+									</div>
+								</div>
+								<a target="_blank" href="https://vimeo.com/867352580/92c4d929d8?fl=pl&fe=cm" class="special"> Découvrir Le Voyage de la Chose</a>
+								<h4>Le Jeu des Minus</h4>
+								<h5>Unity  | Unreal | Dossier de  financement | Plannification</h5>
+
+								<p>Ce travail d’optimisation a été de nouveau effectué sur le prototype du jeu <i>Les Minus</i> (annoncé en 2025 dans Picsou Magazine). Pour ce jeu j’ai également assuré la <b>rédaction de tous les documents techniques nécéssaires aux demandes de financements</b>.</p>
+							</div>
+						</div>
+					</section>
+
+				</section>
+
+
+				<!-- Footer -->
+					<section id="footer">
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/pagesConstant.js"></script>
+			<script> SetMenu("series"); SetFooter();</script>
+
+	</body>
+</html>
